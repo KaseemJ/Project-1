@@ -1,5 +1,8 @@
 body {
-   
+   background-image: url(../image/splatter.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 
 .artist, .tour-date, .venue {
@@ -18,7 +21,7 @@ body {
 
 .artist {
     font-weight: bold; 
-    color: rgb(53, 141, 141);
+    color: rgb(21, 78, 78);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -48,9 +51,66 @@ body {
 
 .nav-wrapper1 {
     background: linear-gradient(to bottom right, rgb(98, 98, 112), rgb(230, 214, 217));
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    width: 400px;
 }
 
 .page-footer {
     background: linear-gradient(to bottom right,  rgb(98, 98, 112), rgb(230, 214, 217));
-
+    font-family: 'Cinzel', serif; 
     }
+
+.card-content {
+     font-family: 'Cinzel', serif;
+     
+    }
+
+.artist-name {
+    color: orange;
+}
+
+/* Style all font awesome icons */
+.fa {
+    /* font-size: 30px; 
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;   */
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 1;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-snapchat {
+    background: rgb(228, 228, 53);
+    color: white;
+}
+
+.fa-instagram {
+    background: blue;
+    color: white;
+}
