@@ -14,8 +14,33 @@
 
 <body>
     <header>
-        <h1>Band Name Goes Here:</h1>
+        <h1>Bands in Town<br>Concert Locator</h1>
     </header>
+
+
+<!-- This Alert lets user know they hit submit without typing anything -->
+    <div id="emptyModal" class="modal">
+            <div class="modal-content">
+              <h4>Invalid Input</h4>
+              <p>Your Artist Search was Blank. Please click on the text box before typing. </p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
+            </div>
+          </div>
+<!-- This Alert lets user know the artist they typed isnt in the database or they misspelled the name -->
+<div id="invalidModal" class="modal">
+        <div class="modal-content">
+          <h4>404 Artist not found</h4>
+          <p>The artist you searched for is not in our database. Please make sure you have not misspelled your artists name. Please call 1(800)-555-5555 for any problems.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
+        </div>
+      </div>
+
+
+
 
 
 
@@ -31,7 +56,7 @@
                 <label for="artist-input">Choose Your Artist</label>
 
                 <!-- Text Input Box -->
-                <input type="text" id="artist-input">
+                <input type="text" id="artist-input" >
                 <br>
 
                 <!-- Submit Button -->
