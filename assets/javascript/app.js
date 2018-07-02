@@ -23,12 +23,18 @@ function searchBandsInTown(artist) {
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
     $.ajax({
         url: queryURL,
-        method: "GET"
+        method: "GET",
+        error: function(err){
+            $('.modal').modal();
+        $('#invalidModal').modal('open');
+        }
+        
     }).then(function (response) {
+ 
 
         // puts the lat/lng onto each accordion
         myMap(response[0].venue.latitude, response[0].venue.longitude);
-        for (var i = 0; i < 8; i++) {
+        for (var i = 0; i < 10; i++) {
 
             console.log(response[i]);
 
@@ -71,7 +77,18 @@ $("#concert-div").on('click', '.concert', function () {
 $("#select-artist").on("click", function (event) {
     event.preventDefault();
     var inputArtist = $("#artist-input").val().trim();
+    // If they hit search without typing anything, make a placeHolder saying "you didnt input anything"
+    if(inputArtist == ""){
+        // Maybe alert using modal 
+        // need to put a placeholder on textbox id="artist-input"
+        $('.modal').modal();
+        $('#emptyModal').modal('open');
+    }
+    else{
+        // Clear the div id="concert-div"
+    $('#concert-div').empty();
     searchBandsInTown(inputArtist);
+    }
 });
 
 
