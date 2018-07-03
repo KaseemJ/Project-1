@@ -1,9 +1,34 @@
-$(document).ready(function(){
-  $('.events-nearby').slick({
-    setting-name: setting-value
-  });
-});
+// Allows the "Materialize" accordion to expand 'on-click'
+$(document).ready(function () {
+  $('.collapsible').collapsible();
 
+
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+});
 // GoogleMaps ApiKey = "AIzaSyDeDFg6f1rJ1FDYNMGD3UeeXKHVA4Bvh_Y"
 // (39.360198, -74.420480)
 function myMap() {
@@ -102,7 +127,4 @@ $("#select-artist").on("click", function (event) {
 });
 
 
-// Allows the "Materialize" accordion to expand 'on-click'
-$(document).ready(function () {
-  $('.collapsible').collapsible();
-});
+
