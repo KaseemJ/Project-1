@@ -21,7 +21,7 @@ body {
 
 .artist {
     font-weight: bold; 
-    color: rgb(21, 78, 78);
+    color: rgb(6, 44, 44);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -35,14 +35,23 @@ body {
 }
 
 .title {
-    font-weight: bold;
-    font-family: 'Cinzel', serif; 
+    /* font-weight: bold; */
+    font-family: 'Gloria Hallelujah', cursive;
     font-size: 25px;
     margin-left: 5px;
 }
 
-.a href {
-    font-family: 'Cinzel', serif;
+li {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+h4 {
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+.material-icons {
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .bands {
@@ -61,7 +70,7 @@ body {
 
 .page-footer {
     background: linear-gradient(to bottom right,  rgb(98, 98, 112), rgb(230, 214, 217));
-    font-family: 'Cinzel', serif; 
+    font-family: 'Gloria Hallelujah', cursive;
     }
 
 .card-content {
@@ -75,7 +84,7 @@ body {
 
 /* Style all font awesome icons */
 .fa {
-    /* font-size: 30px; 
+    font-size: 30px; 
     width: 50px;
     height: 50px;
     text-align: center;
@@ -83,7 +92,12 @@ body {
     border-radius: 15%;
     display: flex; 
     align-items: center;
-    justify-content: center;   */
+    justify-content: center;  
+}
+
+
+.fa-container {
+    display: flex;
 }
 
 /* Add a hover effect if you want */
@@ -113,4 +127,20 @@ body {
 .fa-instagram {
     background: blue;
     color: white;
+}
+
+@media only screen and (max-width: 618px) {
+      .card-image {
+          margin-top: 25%;
+      }
+}
+
+@media only screen and (max-width: 500px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+    .h4 {
+        margin-top: 55px;
+    }
 }
