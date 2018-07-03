@@ -16,9 +16,13 @@ body {
  }
 
  .collapsible-body {
-    background-color:rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color:rgba(216, 216, 216, 0.8);
+    color: black;
     font-size: 23px;
-    
-    
+ }
+ #iframePlayer {
+    width: 560px;
+    height: 315px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
  }

@@ -14,8 +14,33 @@
 
 <body>
     <header>
-        <h1>Band Name Goes Here:</h1>
+        <h1>Bands in Town<br>Concert Locator</h1>
     </header>
+
+
+<!-- This Alert lets user know they hit submit without typing anything -->
+    <div id="emptyModal" class="modal">
+            <div class="modal-content">
+              <h4>Invalid Input</h4>
+              <p>Your Artist Search was Blank. Please click on the text box before typing. </p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
+            </div>
+          </div>
+<!-- This Alert lets user know the artist they typed isnt in the database or they misspelled the name -->
+<div id="invalidModal" class="modal">
+        <div class="modal-content">
+          <h4>404 Artist not found</h4>
+          <p>The artist you searched for is not in our database. Please make sure you have not misspelled your artists name. Please call 1(800)-555-5555 for any problems.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
+        </div>
+      </div>
+
+
+
 
 
 
@@ -31,7 +56,7 @@
                 <label for="artist-input">Choose Your Artist</label>
 
                 <!-- Text Input Box -->
-                <input type="text" id="artist-input">
+                <input type="text" id="artist-input" >
                 <br>
 
                 <!-- Submit Button -->
@@ -44,13 +69,19 @@
         </div>
     </div>
 
-
+    <!--This is the video player that needs to be adjusted however -->
+    <div class= container>
+    <iframe align="middle" width="560" height="315" src= 'https://www.youtube.com/embed/' id ="iframePlayer" frameborder="0" allow="autoplay; encrypted-media"
+    allowfullscreen></iframe>
+    </div>
     <!--JQuery, Materialize, JavaScript, GoogleMaps API Key, Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeDFg6f1rJ1FDYNMGD3UeeXKHVA4Bvh_Y&callback=myMap"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/ytube.js"></script>
+    <script type="text/javascript" src="assets/javascript/seatgeek.js"></script>
 </body>
 
 </html>
