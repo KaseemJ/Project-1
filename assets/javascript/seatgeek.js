@@ -14,6 +14,8 @@
             var userLat = json.latitude;
             var userLong =  json.longitude;
 
+            localStorage.setItem("Latitude", userLat);
+            localStorage.setItem("Longitude", userLong);
 //in progress, to be integrated once completed
 var artist = "";
 
