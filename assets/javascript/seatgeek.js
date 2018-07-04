@@ -31,7 +31,21 @@ var searchVenue = function(userIP) {
 
         // Printing the entire object to console
         console.log(response);
-        var results = response.items;
+        var results = response.events;
+        for(var i = 0; i < 6; i++){
+        var eventName = results[i].performers[0].name;
+        var eventImage = results[i].performers[0].images.huge;
+        var eventVenue = results[i].venue.name;
+        var eventLat = results[i].venue.location.lat;
+        var eventLong = results[i].venue.location.lon;
+        var eventURL = results[i].url;
+        console.log("Event: " + eventName);
+        console.log(eventImage);
+        console.log(eventVenue);
+        console.log(eventLat);
+        console.log(eventLong);
+        console.log(eventURL);
+        }
     });
 };
 
