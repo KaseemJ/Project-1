@@ -7,6 +7,8 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css" />
     <!--Import FireBase-->
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <!--Let browser know website is optimized for mobile-->
@@ -39,6 +41,87 @@
             </ul>
         </div>
     </nav>
+    <div class="slider responsive slick-initialized slick-slider slick-dotted" role="toolbar">
+            <h4>Events Near<span id="userLoc"></span></h4>
+        <div class="events-nearby center">
+            <div>
+                <section class="card" id="card1">
+                    <section class="card-image" id="cardImg1">
+                        <img src="images/sample-1.jpg" id="bandIMG1">
+                        <span class="card-title" id="cardH1">Card Title</span>
+                    </section>
+                    <section class="card-content">
+                        <p  id="cardp1">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </section>
+                    <section class="card-action" id="cardAction1">
+                        <a href="#">This is a link</a>
+                    </section>
+                </section>
+            </div>
+            <div>
+                <section class="card" id="card2">
+                    <section class="card-image"id="cardImg2">
+                        <img src="images/sample-1.jpg" id="bandIMG2">
+                        <span class="card-title" id="cardH2">Card Title</span>
+                    </section>
+                    <section class="card-content">
+                        <p  id="cardp2">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </section>
+                    <section class="card-action"  id="cardAction2">
+                        <a href="#">This is a link</a>
+                    </section>
+                </section>
+            </div>
+            <div>
+                <section class="card" id="card3">
+                    <section class="card-image"id="cardImg3">
+                        <img src="images/sample-1.jpg" id="bandIMG3">
+                        <span class="card-title" id="cardH3">Card Title</span>
+                    </section>
+                    <section class="card-content">
+                        <p  id="cardp3">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </section>
+                    <section class="card-action" id="cardAction3">
+                        <a href="#">This is a link</a>
+                    </section>
+                </section>
+            </div>
+            <div>
+                <section class="card"  id="card4">
+                    <section class="card-image" id="cardImg4">
+                        <img src="images/sample-1.jpg" id="bandIMG4">
+                        <span class="card-title" id="cardH4">Card Title</span>
+                    </section>
+                    <section class="card-content">
+                        <p  id="cardp4">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </section>
+                    <section class="card-action" id="cardAction4">
+                        <a href="#">This is a link</a>
+                    </section>
+                </section>
+            </div>
+            <div>
+                <section class="card"  id="card5">
+                    <section class="card-image" id="cardImg5">
+                        <img src="images/sample-1.jpg" id="bandIMG5">
+                        <span class="card-title" id="cardH5">Card Title</span>
+                    </section>
+                    <section class="card-content">
+                        <p  id="cardp5">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </section>
+                    <section class="card-action"  id="cardAction5">
+                        <a href="#">This is a link</a>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
     <section class="bands">
         <!-- artist bar row 1 -->
         <div class="container">
@@ -262,8 +345,11 @@
     <!--JQuery, Materialize, JavaScript, GoogleMaps API Key -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh87C7xFQZRGKwr9xMbMY4HpTfxacP8KU&libraries=places"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-
+    <script type="text/javascript" src="assets/javascript/local.js"></script>
+    <script type="text/javascript" src="assets/javascript/seatgeek.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
 
 </body>
 
