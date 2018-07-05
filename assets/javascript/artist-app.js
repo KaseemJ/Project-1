@@ -93,7 +93,7 @@ $(document).ready(function () {
 // This is Cory's BIO function
 var bandBio = function (artist) {
 
-    var queryURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=340e93707fc8052b38b0c5c76c4b3199&format=json';
+    var queryURL = 'https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=340e93707fc8052b38b0c5c76c4b3199&format=json';
 
     $.ajax({
         type: 'POST',
