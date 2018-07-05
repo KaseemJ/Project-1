@@ -1,29 +1,29 @@
 $(document).ready(function() {
 
     
-    // // set endpoint and your access key
-    // var access_key = '74fe99bba3ae89c11ba16b240a3ce38a';
+    // set endpoint and your access key
+    var access_key = '74fe99bba3ae89c11ba16b240a3ce38a';
 
-    // // get the API result via jQuery.ajax
-    // $.ajax({
-    //     url: 'https://api.ipstack.com/check?access_key=' + access_key,   
-    //     dataType: 'jsonp',
-    //     success: function(json) {
-    //         console.log(json);
-    //         // output the "capital" object inside "location"
-    //         // console.log(json.location.capital);
-    //         console.log(json.ip);
-    //         var userIP = json.ip;
-    //         var userCity = json.city;
-    //         var userLat = json.latitude;
-    //         var userLong =  json.longitude;
+    // get the API result via jQuery.ajax
+    $.ajax({
+        url: 'https://api.ipstack.com/check?access_key=' + access_key,   
+        dataType: 'jsonp',
+        success: function(json) {
+            console.log(json);
+            // output the "capital" object inside "location"
+            // console.log(json.location.capital);
+            console.log(json.ip);
+            var userIP = json.ip;
+            var userCity = json.city;
+            var userLat = json.latitude;
+            var userLong =  json.longitude;
             var userIP;
             var userCity;
             
-            // localStorage.setItem("IP-Address", userIP);
-            // localStorage.setItem("City", userCity);
-            // localStorage.setItem("Latitude", userLat);
-            // localStorage.setItem("Longitude", userLong);
+            localStorage.setItem("IP-Address", userIP);
+            localStorage.setItem("City", userCity);
+            localStorage.setItem("Latitude", userLat);
+            localStorage.setItem("Longitude", userLong);
 //in progress, to be integrated once completed
     var city = localStorage.getItem("City");
     var Lat = localStorage.getItem("Latitude");
@@ -173,8 +173,8 @@ var searchVenue = function(userIP) {
 
 searchVenue(userIP);
 
-// }
-// });
+}
+});
 
 var locSearch = `
 <div id="sBox">
