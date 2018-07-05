@@ -9,7 +9,7 @@ $('#search').keypress(function (e) {
         localStorage.setItem("searchInput", str);
 
         // need to redirect to the artist concert page
-         window.location = "artist.html";
+        window.location = "artist.html";
         
     }
 });
