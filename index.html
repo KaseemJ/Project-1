@@ -12,7 +12,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/index-style.css" />
-
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css" />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <!--Import FireBase-->
@@ -35,7 +36,109 @@
     </nav>
     <!-- Events near me link -->
     <div class="near me">
-        <h4>Popular Events Near Here</h4> (Put the ip stack location here!!!)
+        <div>
+            <section class="container">
+                <h4 id="toggleS">Events Near <span id="userLoc"></span><button class="btn-floating btn-small waves-effect waves-light"><label class="label-icon" for="search">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <i class="material-icons">close</i></button>
+                    
+                </h4>
+            </section>
+            <div class="events-nearby center" id="cardScroller">
+                <div>
+                    <div class="row" id="slideCard">
+                        <div>
+                            <section class="card small" id="card1">
+                                <section class="card-image" id="cardImg1">
+                                    <img src="" id="bandIMG1">
+                                    
+                                </section>
+                                <section class="card-action" id="cardAction1">
+                                    <a href="#" id="eventLink1"><span class="card-title" id="cardH1">Card Title</span></a>
+                                </section>
+                                <section class="card-content">
+                                    <p  id="cardp1">Venue Location</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row" id="slideCard">
+                        <div>
+                            <section class="card small" id="card2">
+                                <section class="card-image"id="cardImg2">
+                                    <img src="" id="bandIMG2">
+                                    
+                                </section>
+                                <section class="card-action"  id="cardAction2">
+                                    <a href="#" id="eventLink2"><span class="card-title" id="cardH2">Card Title</span></a>
+                                </section>
+                                <section class="card-content">
+                                    <p  id="cardp2">Venue Location</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row" id="slideCard">
+                        <div>
+                            <section class="card small" id="card3">
+                                <section class="card-image"id="cardImg3">
+                                    <img src="" id="bandIMG3">
+                                    
+                                </section>
+                                <section class="card-action" id="cardAction3">
+                                    <a href="#" id="eventLink3"><span class="card-title" id="cardH3">Card Title</span></a>
+                                </section>
+                                <section class="card-content">
+                                    <p  id="cardp3">Venue Location</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row" id="slideCard">
+                        <div>
+                            <section class="card small"  id="card4">
+                                <section class="card-image" id="cardImg4">
+                                    <img src="" id="bandIMG4">
+                                    
+                                </section>
+                                <section class="card-action" id="cardAction4">
+                                    <a href="#" id="eventLink4"><span class="card-title" id="cardH4">Card Title</span></a>
+                                </section>
+                                <section class="card-content">
+                                    <p  id="cardp4">Venue Location</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row" id="slideCard">
+                        <div>
+                            <section class="card small"  id="card5">
+                                <section class="card-image" id="cardImg5">
+                                    <img src="" id="bandIMG5">
+                                    
+                                </section>
+                                <section class="card-action"  id="cardAction5">
+                                    <a href="#" id="eventLink5"><span class="card-title" id="cardH5">Card Title</span></a>
+                                </section>
+                                <section class="card-content">
+                                    <p  id="cardp5">Venue Location</p>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <section class="bands">
         <!-- artist bar row 1 -->
@@ -260,6 +363,8 @@
     <!--JQuery, Materialize, JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/index-app.js"></script>
+    <script type="text/javascript" src="assets/javascript/local.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
 </body>
 
 </html>

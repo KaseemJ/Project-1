@@ -129,6 +129,39 @@ h4 {
     color: white;
 }
 
+#userLoc {
+    color: #319F9E;
+}
+
+.card-content {
+    font-size: 26px;
+    padding-top: 8px !important;
+    padding-bottom: 15px !important;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+}
+
+#slideCard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 280px;
+}
+
+.input-fieldL,
+.searchLocation {
+    width: 350px;
+}
+
+#sBox {
+    display: inline-block;
+}
+
+.btn-small {
+    padding: 2px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
+
 @media only screen and (max-width: 618px) {
       .card-image {
           margin-top: 25%;
