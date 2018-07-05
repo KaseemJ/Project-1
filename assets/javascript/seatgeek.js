@@ -1,34 +1,38 @@
 $(document).ready(function() {
 
-   
     
-    // set endpoint and your access key
-    var access_key = '74fe99bba3ae89c11ba16b240a3ce38a';
+    // // set endpoint and your access key
+    // var access_key = '74fe99bba3ae89c11ba16b240a3ce38a';
 
-    // get the API result via jQuery.ajax
-    $.ajax({
-        url: 'http://api.ipstack.com/check?access_key=' + access_key,   
-        dataType: 'jsonp',
-        success: function(json) {
-            console.log(json);
-            // output the "capital" object inside "location"
-            // console.log(json.location.capital);
-            console.log(json.ip);
-            var userIP = json.ip;
-            var userCity = json.city;
-            var userLat = json.latitude;
-            var userLong =  json.longitude;
-
-            localStorage.setItem("IP-Address", userIP);
-            localStorage.setItem("City", userCity);
-            localStorage.setItem("Latitude", userLat);
-            localStorage.setItem("Longitude", userLong);
+    // // get the API result via jQuery.ajax
+    // $.ajax({
+    //     url: 'http://api.ipstack.com/check?access_key=' + access_key,   
+    //     dataType: 'jsonp',
+    //     success: function(json) {
+    //         console.log(json);
+    //         // output the "capital" object inside "location"
+    //         // console.log(json.location.capital);
+    //         console.log(json.ip);
+    //         var userIP = json.ip;
+    //         var userCity = json.city;
+    //         var userLat = json.latitude;
+    //         var userLong =  json.longitude;
+            var userIP;
+            var userCity;
+            
+            // localStorage.setItem("IP-Address", userIP);
+            // localStorage.setItem("City", userCity);
+            // localStorage.setItem("Latitude", userLat);
+            // localStorage.setItem("Longitude", userLong);
 //in progress, to be integrated once completed
+    var city = localStorage.getItem("City");
     var Lat = localStorage.getItem("Latitude");
     var Long = localStorage.getItem("Longitude");
+    console.log(Lat);
+    console.log(Long);
 var searchVenue = function(userIP) {
     
-    $("#userLoc").text(userCity);
+    $("#userLoc").text(city);
     var popularArray = [];
 
     var queryURL = 
@@ -43,13 +47,13 @@ var searchVenue = function(userIP) {
 
         for(var i = 1; i <= 6; i++){
             var eventName = results[i].performers[0].name;
-            var eventImage = results[i].performers[0].images.huge;
+            var eventImage = "";
             var eventVenue = results[i].venue.name;
             var eventLat = results[i].venue.location.lat;
             var eventLong = results[i].venue.location.lon;
             var eventURL = results[i].url;
             console.log("Event: " + eventName);
-            console.log(eventImage);
+            // console.log(eventImage);
             console.log(eventVenue);
             console.log(eventLat);
             console.log(eventLong);
@@ -57,13 +61,16 @@ var searchVenue = function(userIP) {
     
             // $("#bandIMG" + (i + 1)).html(eventImage);
             $(`#cardH${i}`).text(eventVenue);
-            $(`#bandIMG${i}`).attr({
-                src : eventImage,
-                width : "220px",
-                height : "175px"
-            });
             $(`#cardp${i}`).text(eventName);
             $(`#eventLink${i}`).attr("href", eventURL);
+            if(eventImage === null) {
+                eventImage = "../images/19.jpg";
+                console.log(eventImage);
+            }else {
+                eventImage = results[i].performers[0].images.huge;
+            }
+            $("#bandIMG" + i).attr("src", eventImage);
+            console.log(eventImage);
             // <a href="https://www.bandsintown.com/a/26082-the-smashing-pumpkins?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=top_event">The Smashing Pumpkins</a>
         }
         for (let i = 0; i < results.length; i++) {
@@ -73,9 +80,9 @@ var searchVenue = function(userIP) {
             } else {
                 popularArray.push(results[i]);
             }
-            
+            console.log(popularArray);
         }
-        console.log(popularArray);
+        
 
 
         // var newCard = `
@@ -159,14 +166,25 @@ var searchVenue = function(userIP) {
 
 searchVenue(userIP);
 
-}
-});
+// }
+// });
+
+var locSearch = `
+<div id="sBox">
+<form class="searchLocation">
+    <div class="input-fieldL">
+        <input id="search" placeholder="Search For Events in Your City" type="search" required>
+    </div>
+</form>
+</div>
+`;
 
 $("#toggleS").click(function() {
     event.preventDefault();
-    $("#sBox").toggle();
-    $("input[type='text']").focus();
-  });
+    // $("#sBox").toggle();
+    // $("input[type='text']").focus();
+    $("#userLoc").html(locSearch);
+});
 
 
 });

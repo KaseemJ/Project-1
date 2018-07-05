@@ -131,7 +131,7 @@ body {
 }
 
 #sBox {
-    display: none;
+    display: inline-block;
 }
 
 .btn-small {
