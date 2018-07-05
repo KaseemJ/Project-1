@@ -6,7 +6,7 @@ $('.center').slick({
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,

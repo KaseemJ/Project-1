@@ -41,83 +41,111 @@
             </ul>
         </div>
     </nav>
-    <div class="slider responsive slick-initialized slick-slider slick-dotted" role="toolbar">
-            <h4>Events Near<span id="userLoc"></span></h4>
-        <div class="events-nearby center">
+    <div>
+        <section class="container">
+            <h4>Events Near <span id="userLoc"></span><button id="toggleS" class="btn-floating btn-small waves-effect waves-light"><label class="label-icon" for="search">
+                    <i class="material-icons">search</i>
+                </label>
+                <i class="material-icons">close</i></button>
+                <div id="sBox">
+                    <form class="searchLocation">
+                    <div class="input-fieldL">
+                        <input id="search" type="search" required>
+                    </div>
+                </form>
+            </div>
+            </h4>
+        </section>
+        <div class="events-nearby center" id="cardScroller">
             <div>
-                <section class="card" id="card1">
-                    <section class="card-image" id="cardImg1">
-                        <img src="images/sample-1.jpg" id="bandIMG1">
-                        <span class="card-title" id="cardH1">Card Title</span>
-                    </section>
-                    <section class="card-content">
-                        <p  id="cardp1">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.</p>
-                    </section>
-                    <section class="card-action" id="cardAction1">
-                        <a href="#">This is a link</a>
-                    </section>
-                </section>
+                <div class="row">
+                    <div>
+                        <section class="card small" id="card1">
+                            <section class="card-image" id="cardImg1">
+                                <img src="" id="bandIMG1">
+                                
+                            </section>
+                            <section class="card-action" id="cardAction1">
+                                <a href="#" id="eventLink1"><span class="card-title" id="cardH1">Card Title</span></a>
+                            </section>
+                            <section class="card-content">
+                                <p  id="cardp1">Venue Location</p>
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div>
-                <section class="card" id="card2">
-                    <section class="card-image"id="cardImg2">
-                        <img src="images/sample-1.jpg" id="bandIMG2">
-                        <span class="card-title" id="cardH2">Card Title</span>
-                    </section>
-                    <section class="card-content">
-                        <p  id="cardp2">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.</p>
-                    </section>
-                    <section class="card-action"  id="cardAction2">
-                        <a href="#">This is a link</a>
-                    </section>
-                </section>
+                <div class="row">
+                    <div>
+                        <section class="card small" id="card2">
+                            <section class="card-image"id="cardImg2">
+                                <img src="" id="bandIMG2">
+                                
+                            </section>
+                            <section class="card-action"  id="cardAction2">
+                                <a href="#" id="eventLink2"><span class="card-title" id="cardH2">Card Title</span></a>
+                            </section>
+                            <section class="card-content">
+                                <p  id="cardp2">Venue Location</p>
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div>
-                <section class="card" id="card3">
-                    <section class="card-image"id="cardImg3">
-                        <img src="images/sample-1.jpg" id="bandIMG3">
-                        <span class="card-title" id="cardH3">Card Title</span>
-                    </section>
-                    <section class="card-content">
-                        <p  id="cardp3">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.</p>
-                    </section>
-                    <section class="card-action" id="cardAction3">
-                        <a href="#">This is a link</a>
-                    </section>
-                </section>
+                <div class="row">
+                    <div>
+                        <section class="card small" id="card3">
+                            <section class="card-image"id="cardImg3">
+                                <img src="" id="bandIMG3">
+                                
+                            </section>
+                            <section class="card-action" id="cardAction3">
+                                <a href="#" id="eventLink3"><span class="card-title" id="cardH3">Card Title</span></a>
+                            </section>
+                            <section class="card-content">
+                                <p  id="cardp3">Venue Location</p>
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div>
-                <section class="card"  id="card4">
-                    <section class="card-image" id="cardImg4">
-                        <img src="images/sample-1.jpg" id="bandIMG4">
-                        <span class="card-title" id="cardH4">Card Title</span>
-                    </section>
-                    <section class="card-content">
-                        <p  id="cardp4">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.</p>
-                    </section>
-                    <section class="card-action" id="cardAction4">
-                        <a href="#">This is a link</a>
-                    </section>
-                </section>
+                <div class="row">
+                    <div>
+                        <section class="card small"  id="card4">
+                            <section class="card-image" id="cardImg4">
+                                <img src="" id="bandIMG4">
+                                
+                            </section>
+                            <section class="card-action" id="cardAction4">
+                                <a href="#" id="eventLink4"><span class="card-title" id="cardH4">Card Title</span></a>
+                            </section>
+                            <section class="card-content">
+                                <p  id="cardp4">Venue Location</p>
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div>
-                <section class="card"  id="card5">
-                    <section class="card-image" id="cardImg5">
-                        <img src="images/sample-1.jpg" id="bandIMG5">
-                        <span class="card-title" id="cardH5">Card Title</span>
-                    </section>
-                    <section class="card-content">
-                        <p  id="cardp5">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                            I require little markup to use effectively.</p>
-                    </section>
-                    <section class="card-action"  id="cardAction5">
-                        <a href="#">This is a link</a>
-                    </section>
-                </section>
+                <div class="row">
+                    <div>
+                        <section class="card small"  id="card5">
+                            <section class="card-image" id="cardImg5">
+                                <img src="" id="bandIMG5">
+                                
+                            </section>
+                            <section class="card-action"  id="cardAction5">
+                                <a href="#" id="eventLink5"><span class="card-title" id="cardH5">Card Title</span></a>
+                            </section>
+                            <section class="card-content">
+                                <p  id="cardp5">Venue Location</p>
+                            </section>
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
