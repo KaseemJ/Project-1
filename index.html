@@ -1,81 +1,265 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bands In The City</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/index-style.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!--Import FireBase-->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <title>Bands in the City | Home</title>
 </head>
 
 <body>
-    <header>
-        <h1>Bands in Town<br>Concert Locator</h1>
-    </header>
-
-
-<!-- This Alert lets user know they hit submit without typing anything -->
-    <div id="emptyModal" class="modal">
-            <div class="modal-content">
-              <h4>Invalid Input</h4>
-              <p>Your Artist Search was Blank. Please click on the text box before typing. </p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
-            </div>
-          </div>
-<!-- This Alert lets user know the artist they typed isnt in the database or they misspelled the name -->
-<div id="invalidModal" class="modal">
-        <div class="modal-content">
-          <h4>404 Artist not found</h4>
-          <p>The artist you searched for is not in our database. Please make sure you have not misspelled your artists name. Please call 1(800)-555-5555 for any problems.</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Continue</a>
-        </div>
-      </div>
-
-
-
-
-
-
-    <!-- Google Maps Element (Don't Touch !!!) -->
-    <div id="map" style="width:100%;height:400px;"></div>
-    <!-- Google Maps Element (Don't Touch !!!) -->
-    <div class="background-div">
-        <div class="container">
-
-            <form id="artist-form">
-
-                <!-- Label for Text Box -->
-                <label for="artist-input">Choose Your Artist</label>
-
-                <!-- Text Input Box -->
-                <input type="text" id="artist-input" >
-                <br>
-
-                <!-- Submit Button -->
-                <input id="select-artist" type="submit" value="Find Concerts">
+    <!-- navigation bar -->
+    <nav>
+        <div class="nav-wrapper1">
+            <!-- <i class="large material-icons">play_circle_outline</i> -->
+            <a href="#" class="title">Bands in the City</a>
+            <form class="search-bar">
+                <div class="input-field">
+                    <input id="search" onkeypress="handle(event)" type="text" class="search-bar" placeholder="Artist Search...">
+                </div>
             </form>
-            <!-- Artist Select Box -->
-            <ul id="concert-div" class="collapsible popout">
-                <!-- The accordion divs for each concert will insert here -->
-            </ul>
+        </div>
+    </nav>
+    <!-- Events near me link -->
+    <div class="near me">
+        <h4>Popular Events Near Here</h4> (Put the ip stack location here!!!)
+    </div>
+    <section class="bands">
+        <!-- artist bar row 1 -->
+        <div class="container">
+            <div class="row">
+                <div class="col m6 l3 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="http://www.metalhammer.no/wp-content/uploads/2016/09/Lacuna_coil_Press_Photo_01.jpg" alt="Smashing Pumpkins" height="175"
+                                width="200">
+                            <!-- <span class="card-title">Card Title</span> -->
+                        </div>
+                        <div class="card-content">
+                            <p class="artist-name">Smashing Pumpkins</p>
+                            <p>Viegas Casino</p>
+                            <p>San Diego, CA</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.smashingpumpkins.com/">Pumpkins</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m6 l3 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="http://img.3ain.net/Slider1/49120180209022709279.jpg" alt="Maroon 5" height="175" width="200">
+                            <!-- <span class="card-title">Card Title</span> -->
+                        </div>
+                        <div class="card-content">
+                            <p class="artist-name">Maroon 5</p>
+                            <p>Hard Rock Hotel</p>
+                            <p>Atlantic City, NJ</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://www.maroon5.com/home">Maroon 5</a>
+                        </div>
+                    </div>
+                    <!-- Promo Content 2 goes here -->
+                </div>
+                <div class="col m6 l3 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://cps-static.rovicorp.com/3/JPG_400/MI0003/369/MI0003369414.jpg?partner=allrovi.com" alt="John Legend" height="175"
+                                width="200">
+                            <!-- <span class="card-title">Card Title</span> -->
+                        </div>
+                        <div class="card-content">
+                            <p class="artist-name">John Legend</p>
+                            <p>Hollywood Bowl</p>
+                            <p>Los Angeles, CA</p>
+
+                        </div>
+                        <div class="card-action">
+                            <a href="https://www.johnlegend.com/">John Legend</a>
+                        </div>
+                    </div>
+                    <!-- Promo Content 3 goes here -->
+                </div>
+                <div class="col m6 l3 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://s11280.pcdn.co/wp-content/uploads/sites/23/2018/04/cu-cp-800x800-300x300.jpg" alt="Carrie Underwood" height="175"
+                                width="200">
+                            <!-- <span class="card-title">Card Title</span> -->
+                        </div>
+                        <div class="card-content">
+                            <p class="artist-name">Carrie Underwood</p>
+                            <p>Atlantic City</p>
+                            <p>Atlantic City, NJ</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="http://www.carrieunderwoodofficial.com/">C. Underwood</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col m3">
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/D7ab595h0AU" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="col m3">
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/aJOTlE1K90k" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="col m3">
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/DkeiKbqa02g" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="col m3">
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/6ub9su42mZo" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-
-    <!--JQuery, Materialize, JavaScript, GoogleMaps API Key, Moment.js -->
+    <br>
+    <!-- the buy tickets chart -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col m2 s4">
+                    <img src="http://img.3ain.net/Slider1/49120180209022709279.jpg" alt="Maroon 5" height="175" width="200">
+                    <!-- <span class="img" a href="https://www.bandsintown.com">Bands in the City</a>
+                    </span> -->
+                </div>
+                <div class="col s8">
+                    <div class="text">
+                        <p class="artist">Maroon 5</p>
+                        <p class="tour-date">Fri July 8</p>
+                        <p class="venue">Boardwalk Casino, Atlantic City, NJ</p>
+                    </div>
+                </div>
+                <div class="col m2">
+                    <button class="btn">Tickets</button>
+                    <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Tickets
+                        <i class="material-icons right">send</i> -->
+                    <!-- </button> -->
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col m2 s4">
+                    <img src="https://s11280.pcdn.co/wp-content/uploads/sites/23/2018/04/cu-cp-800x800-300x300.jpg" alt="Maroon 5" height="175"
+                        width="200">
+                    <!-- <span class="img" a href="https://www.bandsintown.com">Bands in the City</a>
+                        </span> -->
+                </div>
+                <div class="col s8 ">
+                    <div class="text">
+                        <p class="artist">Carrie Underwood</p>
+                        <p class="tour-date">Sat July 9</p>
+                        <p class="venue">Boardwalk Casino, Atlantic City, NJ</p>
+                    </div>
+                </div>
+                <div class="col m2">
+                    <button class="btn">Tickets</button>
+                    <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Tickets
+                            <i class="material-icons right">send</i> -->
+                    <!-- </button> -->
+                </div>
+            </div>
+            <div class="container">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col m2 s4">
+                    <img src="https://vignette.wikia.nocookie.net/lyricwiki/images/7/7d/Linkin_park_1024.jpg/revision/latest?cb=20130128212249"
+                        alt="Linkin Park" height="175" width="200">
+                    <!-- <span class="img" a href="https://www.bandsintown.com">Bands in the City</a>
+                            </span> -->
+                </div>
+                <div class="col s8 ">
+                    <div class="text">
+                        <p class="artist">Linkin Park</p>
+                        <p class="tour-date">Fri July 16</p>
+                        <p class="venue">Oracle Arena, Oakland, CA</p>
+                    </div>
+                </div>
+                <div class="col m2">
+                    <button class="btn">Tickets</button>
+                    <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Tickets
+                                <i class="material-icons right">send</i> -->
+                    <!-- </button> -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+        </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Bands in the City</h5>
+                    <p class="grey-text text-lighten-4">The only spot to find your favorite artist performance locations.</p>
+                    <!-- social media icons -->
+                    <div class="fa-container">
+                        <a href="http://www.facebook.com" class="fa fa-facebook"></a>
+                        <a href="http://www.twitter.com" class="fa fa-twitter"></a>
+                        <a href="http://www.instagram.com" class="fa fa-instagram"></a>
+                        <a href="http://www.snapchat.com" class="fa fa-snapchat"></a>
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Additional Entertainment</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://www.ticketmaster.com">TicketMaster</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://www.stubhub.com">Stub Hub</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://www.seatgeek.com">Seat Geek</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="http://www.EventBrite.com">EventBrite </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">Social Media</a>
+            </div>
+        </div>
+    </footer>
+    <!--JQuery, Materialize, JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeDFg6f1rJ1FDYNMGD3UeeXKHVA4Bvh_Y&callback=myMap"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/index-app.js"></script>
 </body>
 
 </html>
