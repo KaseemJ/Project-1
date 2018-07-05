@@ -123,6 +123,8 @@ body {
     font-size: 26px;
     padding-top: 8px !important;
     padding-bottom: 15px !important;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
 }
 
 #slideCard {

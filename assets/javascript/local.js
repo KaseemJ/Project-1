@@ -2,6 +2,7 @@ $(document).ready(function () {
 $('.center').slick({
     centerMode: true,
     centerPadding: '60px',
+    initialSlide: 3,
     arrows: true,
     dots: true,
     slidesToShow: 3,
@@ -10,8 +11,6 @@ $('.center').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
-    adaptiveHeight: true,
-    variableWidth: true,
     responsive: [
       {
         breakpoint: 780,

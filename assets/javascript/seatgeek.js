@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     // // get the API result via jQuery.ajax
     // $.ajax({
-    //     url: 'http://api.ipstack.com/check?access_key=' + access_key,   
+    //     url: 'https://api.ipstack.com/check?access_key=' + access_key,   
     //     dataType: 'jsonp',
     //     success: function(json) {
     //         console.log(json);
