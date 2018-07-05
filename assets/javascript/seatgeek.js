@@ -47,7 +47,7 @@ var searchVenue = function(userIP) {
 
         for(var i = 1; i <= 6; i++){
             var eventName = results[i].performers[0].name;
-            var eventImage = "";
+            var eventImage = results[i].performers[0].images.huge;
             var eventVenue = results[i].venue.name;
             var eventLat = results[i].venue.location.lat;
             var eventLong = results[i].venue.location.lon;
@@ -63,14 +63,21 @@ var searchVenue = function(userIP) {
             $(`#cardH${i}`).text(eventVenue);
             $(`#cardp${i}`).text(eventName);
             $(`#eventLink${i}`).attr("href", eventURL);
-            if(eventImage === null) {
-                eventImage = "../images/19.jpg";
+            console.log(results[i].performers[0].images.huge);
+            if(results[i].performers[0].images.huge === undefined) {
+                eventImage = "assets/images/retroMic.jpg";
                 console.log(eventImage);
+                $("#bandIMG" + i).attr({
+                    src : "assets/images/retroMic.jpg",
+                    width: "280px",
+                    height: "210px"
+                });
             }else {
                 eventImage = results[i].performers[0].images.huge;
             }
-            $("#bandIMG" + i).attr("src", eventImage);
+            $(`#bandIMG${i}`).attr("src", eventImage);
             console.log(eventImage);
+
             // <a href="https://www.bandsintown.com/a/26082-the-smashing-pumpkins?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=top_event">The Smashing Pumpkins</a>
         }
         for (let i = 0; i < results.length; i++) {
@@ -186,5 +193,7 @@ $("#toggleS").click(function() {
     $("#userLoc").html(locSearch);
 });
 
-
+$('img').error(function(){
+    $(this).attr('src', '../images/19.jpg');
+});
 });

@@ -121,8 +121,14 @@ body {
 
 .card-content {
     font-size: 26px;
-    padding-top: 10px !important;
-    padding-bottom: 0 !important;
+    padding-top: 8px !important;
+    padding-bottom: 15px !important;
+}
+
+#slideCard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 280px;
 }
 
 .input-fieldL,
