@@ -133,18 +133,35 @@ h4 {
     color: #319F9E;
 }
 
-.card-content {
-    font-size: 26px;
+.card-contentS {
+    font-size: 16px;
+    font-weight: bold;
     padding-top: 8px !important;
     padding-bottom: 15px !important;
     margin-right: 8px !important;
     margin-left: 8px !important;
 }
 
+.card-title {
+    color: orange;
+}
+
+.slick-slide{
+    width: auto !important;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+}
+
+.card-actionS {
+    padding: 0 !important;
+    
+}
+
 #slideCard {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 280px;
+    height: auto !important;
 }
 
 .input-fieldL,
