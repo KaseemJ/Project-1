@@ -115,7 +115,7 @@ var bandBio = function (artist) {
 // this is cory's youtube javascript
 var searchArtist = function (artist) {
 
-    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=relevance&q=" + artist + "&type=video&videoCategoryId=10&videoEmbeddable=true&videoSyndicated=true&key=AIzaSyDZC0UpHlq7xyJm8i1XTbhqmNDJ-0EN1XE";
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=relevance&relevanceLanguage=en&q=" + artist + "music+video&type=video&videoCategoryId=10&videoEmbeddable=true&videoSyndicated=true&key=AIzaSyDZC0UpHlq7xyJm8i1XTbhqmNDJ-0EN1XE";
     $.ajax({
         url: queryURL,
         method: "GET"
