@@ -32,8 +32,9 @@ $(document).ready(function() {
             var userCity = json.city;
             var userLat = json.latitude;
             var userLong =  json.longitude;
-            var userIP;
-            var userCity;
+            var userST = json.region_code;
+            // var userIP;
+            // var userCity;
             
             localStorage.setItem("IP-Address", userIP);
             localStorage.setItem("City", userCity);
@@ -45,11 +46,26 @@ $(document).ready(function() {
     var Long = localStorage.getItem("Longitude");
     console.log(Lat);
     console.log(Long);
-var searchVenue = function(userIP) {
-    
-    $("#userLoc").text(city);
-    var popularArray = [];
 
+    // var mapboxQ = function(userCity) {
+    // var query = 'https://api.mapbox.com//geocoding/v5/mapbox.places/' + userCity + '.json?access_token=pk.eyJ1IjoidGhyb3diYWNrNzQiLCJhIjoiY2pqODZucHNiMGFqYTN2bXE0dG1oZG8xZSJ9.JvXVhKae1AK2YTZG7yHg-g'
+
+    // $.ajax({
+    //     url: query,
+    //     method: "GET"
+    // }).then(function(response) {
+    //     // Printing the entire object to console
+    //     console.log(response);
+    //     var results = response.events;
+    // });    
+    // };
+    // mapboxQ(userCity);
+    var searchVenue = function(userIP) {
+    $("#userLoc").text(city);
+    
+    var popularArray = [];
+    
+    
     var queryURL = 
     'https://api.seatgeek.com/2/events?lat=' + Lat + '&lon=' + Long + '&per_page=500&range=10mi&taxonomies.name=concert&client_id=MTIxMzMwNDJ8MTUzMDU1NjA1OS4wNA';
     $.ajax({

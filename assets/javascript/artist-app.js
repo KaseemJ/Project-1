@@ -115,7 +115,7 @@ var bandBio = function (artist) {
 // this is cory's youtube javascript
 var searchArtist = function (artist) {
 
-    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=relevance&q=" + artist + "&type=video&videoCategoryId=10&videoEmbeddable=true&videoSyndicated=true&key=AIzaSyDZC0UpHlq7xyJm8i1XTbhqmNDJ-0EN1XE";
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=relevance&relevanceLanguage=en&q=" + artist + "music+video&type=video&videoCategoryId=10&videoEmbeddable=true&videoSyndicated=true&key=AIzaSyDZC0UpHlq7xyJm8i1XTbhqmNDJ-0EN1XE";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -136,7 +136,7 @@ var searchArtist = function (artist) {
         vidID_8 = results[8].id.videoId;
         vidID_9 = results[9].id.videoId;
         $("#iframePlayer").attr("src",
-            'https://www.youtube.com/embed/' + vidID_0 + '?version=3&loop=1&autoplay=1&playlist=' + vidID_1 + ',' + vidID_2 + ',' + vidID_3 + ',' + vidID_4 + ',' + vidID_5 + ',' + vidID_6 + ',' + vidID_7 + ',' + vidID_8 + ',' + vidID_9);
+            'https://www.youtube.com/embed/' + vidID_0 + '?version=3&loop=1&autoplay=0&playlist=' + vidID_1 + ',' + vidID_2 + ',' + vidID_3 + ',' + vidID_4 + ',' + vidID_5 + ',' + vidID_6 + ',' + vidID_7 + ',' + vidID_8 + ',' + vidID_9);
         console.log(vidID);
     });
 };
